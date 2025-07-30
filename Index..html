@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Wish</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+    #wish-box {
+      display: none;
+      text-align: center;
+    }
+    .hidden {
+      display: none;
+    }
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff7f50;
+      color: white;
+      cursor: pointer;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login-box">
+    <h2>Enter Full Name to Unlock the Wish</h2>
+    <input type="text" id="nameInput" placeholder="Enter your full name" />
+    <button onclick="checkName()">Submit</button>
+  </div>
+
+  <div id="wish-box">
+    <h1>🎉 Happy Birthday Hassan Rashid! 🎂</h1>
+    <p>Wishing you all the happiness and success. Have a fantastic day!</p>
+    <div class="footer">— Wishing by: <strong>Huzaifa Aqeel</strong></div>
+  </div>
+
+  <script>
+    function checkName() {
+      const name = document.getElementById("nameInput").value.trim().toLowerCase();
+      if (name === "hassan rashid") {
+        document.getElementById("login-box").style.display = "none";
+        document.getElementById("wish-box").style.display = "block";
+      } else {
+        alert("Incorrect name. Please try again.");
+      }
+    }
+  </script>
+
+</body>
+</html>
